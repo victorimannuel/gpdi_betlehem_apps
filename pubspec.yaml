@@ -36,6 +36,29 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
+  # Splash screen
+  flutter_native_splash: ^2.3.1
+
+# Splash Screen
+flutter_native_splash:
+  android: true
+  ios: true
+  web: false
+
+  # color: #003177
+  background_image: "assets/images/white-background.jpg"
+  image: "assets/images/logo_gpdi.png"
+  # background_image: "assets/images/logo_gpdi.png"
+
+  # Run commands to generate splash screen
+  # 1) flutter clean
+  # 2) flutter pub get
+  # 3) flutter pub run flutter_native_splash:create
+
+  android_12:
+    background_image: "assets/images/white-background.jpg"
+    image: "assets/images/logo_gpdi.png"
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -59,8 +82,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/images/logo_gpdi.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -74,10 +97,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 700
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
@@ -88,3 +114,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
